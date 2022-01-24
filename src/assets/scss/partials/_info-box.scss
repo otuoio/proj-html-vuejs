@@ -1,0 +1,30 @@
+.info-box{
+    height: 100%;
+    background-color: $black-color;
+    padding: 13em 5em 15em;
+    @include flex(flex-start, flex-start, wrap);
+    hr {
+        width: 75%;
+        margin-top: .4em;
+        margin-left: 10%;
+    }
+    .card {
+        padding: 0 2em;
+        .card-subtitle {
+            @include font(1em, 500, uppercase, $silver-color);
+        }
+        .card-title {
+            @include font(3em, 600, uppercase, $white-color);
+        }
+        .card-description {
+            @include font(1em, 400, unset, $silver-color);
+            line-height: 1.5em;
+        }
+        .card-subtitle,
+        .card-title,
+        .card-description,
+        .card-btn {
+            margin-bottom: 5rem;
+        }
+    }
+}

@@ -2,10 +2,10 @@
   <header>
       <!-- header bar logo menu (da mettere con absolute) -->
       <div class="header-top">
-          <div class="logo">
+          <div class="col-40 logo">
               <img src="../assets/img/logo-restaurant-2x-300x58.png" alt="Avada Restaurant">
           </div>
-          <nav class="nav-menu">
+          <nav class="col-60 nav-menu">
               <ul class="menu-inline">
                   <li><a class="selected" href="#">Home</a></li>
                   <li><a href="#">Culinary History</a></li>
@@ -32,7 +32,9 @@
                   <button class="btn card-btn">Explore the menu</button>
               </div>
           </div>
-          <div class="img-box"></div>
+          <div class="img-box">
+              <img src="../assets/img/slider52x.jpg" alt="slider52x">
+          </div>
       </div>
       <!-- /banner-box -->
   </header>
@@ -50,55 +52,45 @@ export default {
 
 header {
     position: relative;
-    background-color: $zeus-color;
     .header-top {
         @include absolute(0, 0);
         width: 100%;
-        height: 100px;
+        height: 15vh;
         background-color: transparent;
-        @include flex(space-between, center, wrap);
+        @include flex(flex-start, start, wrap);
         padding: 0 5em;
-        li {
-            margin: 0 1em;
-            .tag {
-                display: inline-block;
-                border: 1px solid $silver-color;
-                padding: .5em 1em;
-                font-size: .7em;
+        .logo {
+            height: 100%;
+            @include flex(flex-start, center, wrap);
+            img {
+                width: 50%;
+            }
+        }
+        .nav-menu {
+            height: 100%;
+            @include flex(center, center, wrap);
+            li {
+                margin: 0 1em;
+                .tag {
+                    display: inline-block;
+                    border: 1px solid $silver-color;
+                    padding: .5em 1em;
+                    font-size: .7em;
+                }
             }
         }
     }
     .banner-box {
         @include flex(flex-start, flex-start, wrap);
-        .info-box{
+        overflow: hidden;
+        height: 100vh;
+        @import '../assets/scss/partials/_info-box.scss';
+        .info-box {
             width: 40%;
-            background-color: $black-color;
-            padding: 12em 5em 10em;
-            @include flex(flex-start, flex-start, wrap);
-            hr {
-                width: 75%;
-                margin-top: .4em;
-                margin-left: 10%;
-            }
-            .card {
-                padding: 0 2em;
-                .card-subtitle {
-                    @include font(.7em, 500, uppercase, $silver-color);
-                }
-                .card-title {
-                    @include font(3em, 600, uppercase, $white-color);
-                }
-                .card-description {
-                    @include font(.8em, 400, unset, $silver-color);
-                    line-height: 1.5em;
-                }
-                .card-subtitle,
-                .card-title,
-                .card-description,
-                .card-btn {
-                    margin-bottom: 2rem;
-                }
-            }
+        }
+        @import '../assets/scss/partials/_img-box.scss';
+        .img-box {
+            width: 60%;
         }
     }
 }
