@@ -3,3 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-size: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+// CONTAINERS
+.container-40 {
+    width: 40%;
+    margin: 0 auto;
+}
+.container-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+.container-90 {
+    width: 90%;
+    margin: 0 auto;
+}
+.container-100 {
+    width: 100%;
+    margin: 0 auto;
+}
+
+// MENUS
+.menu-inline {
+    list-style: none;
+    li {
+        display: inline;
+    }
+}
