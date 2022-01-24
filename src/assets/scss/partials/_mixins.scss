@@ -10,3 +10,10 @@
   top: $top;
   left: $left;
 }
+
+@mixin font($size, $weight, $transform, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    text-transform: $transform;
+    color: $color;
+}

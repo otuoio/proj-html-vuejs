@@ -48,3 +48,31 @@ li {
         color: $white-color;
     }
 }
+
+//COLUMNS
+.col-10 {
+    width: 10%;
+}
+.col-20 {
+    width: 10%;
+}
+.col-30 {
+    width: 30%;
+}
+.col-70 {
+    width: 70%;
+}
+.col-80 {
+    width: 70%;
+}
+.col-90 {
+    width: 90%;
+}
+
+// BUTTONS
+.btn {
+    background-color: transparent;
+    border: 1px solid $silver-color;
+    @include font(.6em, 600, uppercase, $silver-color);
+    padding: 1em 2.5em;
+}
