@@ -5,10 +5,16 @@
   flex-wrap: $wrap;
 }
 
-@mixin absolute($top, $left) {
+@mixin absolute_l($top, $left) {
   position: absolute;
   top: $top;
   left: $left;
+}
+
+@mixin absolute_r($top, $right) {
+  position: absolute;
+  top: $top;
+  right: $right;
 }
 
 @mixin font($size, $weight, $transform, $color) {
