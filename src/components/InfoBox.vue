@@ -1,20 +1,25 @@
 <template>
-    <div class="info-box">
+    <div class="info-box col-40">
         <div class="col-20">
             <hr>
         </div>
         <div class="col-80 card">
-            <h5 class="card-subtitle">The best table in town</h5>
-            <h1 class="card-title">Fine dining experience</h1>
-            <p class="card-description">Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas.</p>
-            <button class="btn card-btn">Explore the menu</button>
+            <h5 class="card-subtitle">{{ obj.subtitle }}</h5>
+            <h1 class="card-title">{{ obj.title }}</h1>
+            <p class="card-description">{{ obj.description }}</p>
+            <button class="btn card-btn">{{ obj.button }}</button>
         </div>
     </div> 
 </template>
 
 <script>
 export default {
-    name: 'InfoBox'
+    name: 'InfoBox',
+    props: {
+        obj: {
+            type: Object
+        }
+    }
 }
 </script>
 

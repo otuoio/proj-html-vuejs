@@ -9,7 +9,7 @@
               <ul class="menu-inline">
                 <li v-for="(item, index) in menuItems" 
                 :key="index">
-                    <a :href="item.url">
+                    <a :href="item.url" :class="(item.name === 'Home') ? 'selected' : ''">
                         {{item.name}}
                         <font-awesome-icon v-if="item.icon" :icon="item.icon" />
                         <span v-if="item.tag" class="menu-tag">{{ item.tag }}</span>
@@ -21,10 +21,12 @@
       <!-- /header bar logo menu -->
       <!-- banner-box -->
       <div class="banner-box">
-          <InfoBox class="col-40" />   
-          <div class="img-box col-60">
-            <img src="../assets/img/slider52x.jpg" alt="slider52x">
-          </div>
+          <InfoBox 
+          :obj="banner[0]"
+          />   
+          <ImageBox 
+          :obj="banner[0]"
+          />
       </div>
       <!-- /banner-box -->
       <!-- tags -->
@@ -42,11 +44,13 @@
 
 <script>
 import InfoBox from './InfoBox.vue';
+import ImageBox from './ImageBox.vue';
 
 export default {
     name: 'Header',
     components: {
-        InfoBox
+        InfoBox,
+        ImageBox
     },
     data() {
         return {
@@ -100,6 +104,11 @@ export default {
                    icon: 'shopping-cart'
                },
            ], 
+        }
+    },
+    props: {
+        banner: {
+            type: Array
         }
     }
 }
@@ -179,10 +188,6 @@ header {
         @include flex(flex-start, flex-start, wrap);
         overflow: hidden;
         height: 1000px;
-        @import '../assets/scss/partials/_img-box.scss';
-        img {
-            filter: brightness(0.7);
-        }
     }
 }
 </style>

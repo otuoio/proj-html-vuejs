@@ -50,10 +50,12 @@
 
       <!-- banner-box DA MODIFICARE AGGIUNGENDO ARRAY CON DATI -->
       <div class="banner-box">
-          <div class="img-box col-60">
-            <img src="../assets/img/slider32x.jpg" alt="slider52x">
-          </div>
-          <InfoBox class="col-40" />   
+          <ImageBox 
+          :obj="banner[1]"
+          />
+          <InfoBox 
+          :obj="banner[1]"
+          />   
       </div>
       <!-- /banner-box -->
 
@@ -144,10 +146,14 @@
       <!-- /news & promotions -->
 
       <!-- banner-box -->
-      <section class="banner-box">
-          <div class="img-box"></div>
-          <div class="info-box"></div>
-      </section>
+      <div class="banner-box">
+          <ImageBox 
+          :obj="banner[2]"
+          />
+          <InfoBox 
+          :obj="banner[2]"
+          />   
+      </div>
       <!-- /banner-box -->
 
       <!-- call to action box -->
@@ -170,13 +176,20 @@
 
 <script>
 import InfoBox from './InfoBox.vue';
+import ImageBox from './ImageBox.vue';
 import BannerFs from './BannerFs.vue';
 
 export default {
     name: 'Main',
     components: {
         InfoBox,
+        ImageBox,
         BannerFs
+    },
+    props: {
+        banner: {
+            type: Array
+        }
     }
 }
 </script>
@@ -191,10 +204,6 @@ export default {
         @include flex(flex-start, flex-start, wrap);
         overflow: hidden;
         height: 1000px;
-        @import '../assets/scss/partials/_img-box.scss';
-        img {
-            filter: brightness(0.7);
-        }
     }
 .critics {
     background-color: $white-color;
