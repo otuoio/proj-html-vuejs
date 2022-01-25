@@ -32,7 +32,7 @@
     </div>
     <!-- /call to action box -->
 
-      <!-- banner-box DA MODIFICARE AGGIUNGENDO ARRAY CON DATI -->
+      <!-- banner-box -->
       <div class="banner-box">
           <ImageBox 
           :obj="banner[1]"
@@ -114,10 +114,18 @@
       <!-- /call to action box -->
 
       <!-- full screen banner -->
-        <div class="fs-banner">
-            <div class="picture"></div>
-            <div class="info-box"></div>
+    <div class="fs-banner">
+        <img src="../assets/img/hero42x.jpg" alt="hero42x">
+        <div class="fs-banner-info">
+            <div class="item">
+                <h2 class="info-title">Braised abalone</h2>
+                <span class="info-price">&dollar;52</span>
+            </div>
+            <hr>
+            <p class="info-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat placeat illum iusto!</p>
+            <button class="btn info-btn">View in the menu</button>
         </div>
+    </div>
       <!-- /full screen banner -->
 
   </main>
@@ -260,6 +268,59 @@ export default {
             background-image: url('../assets/img/info12x.jpg');
         }
         
+    }
+}
+.fs-banner {
+    height: 600px;
+    position: relative;
+    margin: 4em 0;
+    img {
+        filter: brightness(0.8);
+        width: 100%;
+        object-fit: cover;
+        // height: 100%;
+    }
+    .fs-banner-info {
+        @include absolute_l(50%, 15%);
+        width: 25%;
+        transform: translate(0, -50%);
+        background-color: $black-color;
+        padding: 4em;
+        .item {
+            @include flex(space-between, start, wrap);
+            .info-title {
+                width: 50%;
+                @include font(2em, 600, uppercase, $white-color);
+            }
+            .info-price {
+                display: block;
+                width: 10%;
+                @include font(1em, 400, unset, $silver-color);
+            }
+        }
+        hr {
+            width: 20%;
+            color: $silver-color;
+        }
+        .info-description {
+            @include font(1em, 400, unset, $silver-color);
+        }
+        .info-btn {
+            @include font(.8em, 500, uppercase, $silver-color);
+            transition: all 1s;
+            &:hover {
+                background-color: $silver-color;
+                color: $black-color;
+                cursor: pointer;
+            }
+        }
+        .info-title,
+        .info-price,
+        hr,
+        .info-description,
+        .info-btn {
+            margin-bottom: 2em;
+        }
     }
 }
 </style>
