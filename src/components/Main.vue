@@ -48,62 +48,27 @@
           <h3 class="critics-title" style="font-style: italic;">What critics are saying about us</h3>
 
           <!-- critics-full-card -->
-          <div class="critics-full-card container-70">
-              <div class="col-left col-50">
+        <div class="critics-full-card container-70">
+            <div class="col-left col-50">
                 <img src="../assets/img/blog72x-800x916.jpg" alt="blog72x-800x916">
-              </div>
-              <div class="col-rigth col-50 critics-card">
-                <h4 class="critics-name">Meggy Stewart</h4>
-                <h2 class="critics-cardtitle">New York Times</h2>
-                <div class="vote">
-                    <font-awesome-icon icon="star" class="star"/>
-                    <font-awesome-icon icon="star" class="star"/>
-                    <font-awesome-icon icon="star" class="star"/>
-                    <font-awesome-icon icon="star" class="star"/>
-                    <font-awesome-icon icon="star" class="star"/>
-                </div>
-                <hr>
-                <p class="critics-description">Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas. <br>
-                <br> 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore eius officia possimus ratione sunt nihil deleniti.</p>
-                <button class="btn critics-btn">Read full article</button>
-              </div>
-          </div>
+            </div>
+            <CriticsCard class="col-rigth col-50"
+            :card="criticsCards[0]"
+            />
+        </div>
           <!-- /critics-full-card -->
 
           <!-- critics-overlay-card -->
           <div class="critics-overlay-card container-70">
               <div class="col-left">
-                  <div class="critics-card">
-                    <h4 class="critics-name">Mary Maxey</h4>
-                    <h2 class="critics-cardtitle">The Guardian</h2>
-                    <div class="vote">
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                    </div>
-                    <hr>
-                    <p class="critics-description">Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas.</p>
-                    <button class="btn critics-btn">Read full article</button>
-                  </div>
+                  <CriticsCard 
+                  :card="criticsCards[1]"
+                  />
               </div>
               <div class="col-right">
-                  <div class="critics-card">
-                    <h4 class="critics-name">Patrick Monroe</h4>
-                    <h2 class="critics-cardtitle">Globe and Mail</h2>
-                    <div class="vote">
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                        <font-awesome-icon icon="star" class="star"/>
-                    </div>
-                    <hr>
-                    <p class="critics-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod pariatur ad soluta possimus dicta optio nam ipsa nesciunt asperiores praesentium, distinctio a.</p>
-                    <button class="btn critics-btn">Read full article</button>
-                  </div>
+                  <CriticsCard 
+                  :card="criticsCards[2]"
+                  />
               </div>
           </div>
           <!-- /critics-overlay-card -->
@@ -162,6 +127,7 @@
 import InfoBox from './InfoBox.vue';
 import ImageBox from './ImageBox.vue';
 import CallToActionCard from './CallToActionCard.vue';
+import CriticsCard from './CriticsCard.vue';
 import BannerFs from './BannerFs.vue';
 
 export default {
@@ -170,6 +136,7 @@ export default {
         InfoBox,
         ImageBox,
         CallToActionCard,
+        CriticsCard,
         BannerFs
     },
     props: {
@@ -197,6 +164,31 @@ export default {
                     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore earum dolorum quasi nobis laboriosam qui est consequuntur quisquam?',
                     button: 'Learn more about us',
                     picture: 'sushi-3.png'
+                },
+            ],
+            criticsCards: [
+                {
+                    name: 'Meggy Stewart',
+                    magazine: 'New York Times',
+                    vote: 5,
+                    review: `Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas. <br>
+                    <br> 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore eius officia possimus ratione sunt nihil deleniti.`,
+                    button: 'Read full article'
+                },
+                {
+                    name: 'Mary Maxey',
+                    magazine: 'The Guardian',
+                    vote: 4,
+                    review: 'Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas.',
+                    button: 'Read full article'
+                },
+                {
+                    name: 'Patrick Monroe',
+                    magazine: 'Globe and Mail',
+                    vote: 5,
+                    review: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod pariatur ad soluta possimus dicta optio nam ipsa nesciunt asperiores praesentium, distinctio a.',
+                    button: 'Read full article'
                 },
             ],
         }
@@ -242,9 +234,7 @@ export default {
         }
         .critics-card:hover {
             transform: scale(1.03);
-        }
-        @import '../assets/scss/partials/_criticsCard.scss';
-        
+        }  
     }
     .critics-overlay-card {
         height: 800px;
@@ -259,7 +249,6 @@ export default {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            @import '../assets/scss/partials/_criticsCard.scss';
             .critics-card {
                 background-color: rgba($color: #000000, $alpha: 0.7);
             }
