@@ -23,29 +23,13 @@
       <!-- /jumbotron -->
 
     <!-- call to action box -->
-        <div class="cta-box container-80">
-            <div class="col col-30">
-                <img src="../assets/img/sushi-1.png" alt="sushi-1">
-                <h4 class="cta-title">The best table in town</h4>
-                <hr>
-                <p class="cta-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae non facere. Placeat voluptas sunt ut, quae, vel blanditiis quia dolores.</p>
-                <button class="btn cta-btn">Explore the menu</button>
-            </div>
-            <div class="col col-30">
-                <img src="../assets/img/sushi-2.png" alt="sushi-2">
-                <h4 class="cta-title">Perfect for groups</h4>
-                <hr>
-                <p class="cta-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit illum pariatur assumenda impedit incidunt ab repellendus alias.</p>
-                <button class="btn cta-btn">Make a reservation</button>
-            </div>
-            <div class="col col-30">
-                <img src="../assets/img/sushi-3.png" alt="sushi-3">
-                <h4 class="cta-title">Fresh produce everyday</h4>
-                <hr>
-                <p class="cta-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore earum dolorum quasi nobis laboriosam qui est consequuntur quisquam?</p>
-                <button class="btn cta-btn">Learn more about us</button>
-            </div>
-        </div>
+    <div class="cta-box container-80">
+       <CallToActionCard 
+       v-for="(card, index) in ctaBoxCards"
+       :key="index"
+       :card="card"
+       />
+    </div>
     <!-- /call to action box -->
 
       <!-- banner-box DA MODIFICARE AGGIUNGENDO ARRAY CON DATI -->
@@ -177,6 +161,7 @@
 <script>
 import InfoBox from './InfoBox.vue';
 import ImageBox from './ImageBox.vue';
+import CallToActionCard from './CallToActionCard.vue';
 import BannerFs from './BannerFs.vue';
 
 export default {
@@ -184,11 +169,36 @@ export default {
     components: {
         InfoBox,
         ImageBox,
+        CallToActionCard,
         BannerFs
     },
     props: {
         banner: {
             type: Array
+        }
+    },
+    data() {
+        return {
+            ctaBoxCards: [
+                {
+                    title: 'The best table in town',
+                    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque recusandae non facere. Placeat voluptas sunt ut, quae, vel blanditiis quia dolores.',
+                    button: 'Explore the menu',
+                    picture: 'sushi-1.png'
+                },
+                {
+                    title: 'Perfect for groups',
+                    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit illum pariatur assumenda impedit incidunt ab repellendus alias.',
+                    button: 'Make a reservation',
+                    picture: 'sushi-2.png'
+                },
+                {
+                    title: 'Fresh produce everyday',
+                    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore earum dolorum quasi nobis laboriosam qui est consequuntur quisquam?',
+                    button: 'Learn more about us',
+                    picture: 'sushi-3.png'
+                },
+            ],
         }
     }
 }
@@ -199,12 +209,15 @@ export default {
 @import '../assets/scss/partials/_mixins.scss';
 
 @import '../assets/scss/partials/_jumbo.scss';
-@import '../assets/scss/partials/_cta-box.scss';
 .banner-box {
         @include flex(flex-start, flex-start, wrap);
         overflow: hidden;
         height: 1000px;
-    }
+}
+.cta-box {
+    padding: 5em 2em;
+    @include flex(center, center, wrap);
+}
 .critics {
     background-color: $white-color;
     text-align: center;

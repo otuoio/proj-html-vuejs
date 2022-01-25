@@ -1,40 +1,36 @@
-.cta-box {
-    padding: 5em 2em;
-    @include flex(center, center, wrap);
-    .col {
-        padding: 0 4em;
-        text-align: center;
-        img {
-            width: 30%;
-        }
-        .cta-title {
-            @include font(1.2em, 600, uppercase, $black-color);
-        }
-        hr {
-            display: inline-block;
-            width: 20%;
-            color: $silver-color;
-        }
-        .cta-description {
-            @include font(1em, 400, unset, $tundora-color);
-            line-height: 1.5em;
-        }
-        .cta-btn {
-            @include font(.8em, 400, uppercase, $tundora-color);
-        }
-        img,
-        .cta-title,
-        hr,
-        .cta-description,
-        .cta-btn {
-            margin-bottom: 2em;
-        }
-        .cta-btn {
-            transition: all 1s;
-        }
-        .cta-btn:hover {
-            border-color: $tundora-color;
-            cursor: pointer;
-        }
+.col {
+    padding: 0 4em;
+    text-align: center;
+    img {
+        width: 30%;
+    }
+    .cta-title {
+        @include font(1.2em, 600, uppercase, $black-color);
+    }
+    hr {
+        display: inline-block;
+        width: 20%;
+        color: $silver-color;
+    }
+    .cta-description {
+        @include font(1em, 400, unset, $tundora-color);
+        line-height: 1.5em;
+    }
+    .cta-btn {
+        @include font(.8em, 400, uppercase, $tundora-color);
+    }
+    img,
+    .cta-title,
+    hr,
+    .cta-description,
+    .cta-btn {
+        margin-bottom: 2em;
+    }
+    .cta-btn {
+        transition: all 1s;
+    }
+    .cta-btn:hover {
+        border-color: $tundora-color;
+        cursor: pointer;
     }
 }
