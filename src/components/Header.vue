@@ -7,14 +7,14 @@
           </div>
           <nav class="col-60 nav-menu">
               <ul class="menu-inline">
-                  <li><a class="selected" href="#">Home</a></li>
-                  <li><a href="#">Culinary History</a></li>
-                  <li><a href="#">Our Team</a></li>
-                  <li><a href="#">Our Menu</a></li>
-                  <li><a href="#">Takeout <span class="menu-tag">New</span></a></li>
-                  <li><a href="#">Bulletin</a></li>
-                  <li><a href="#">Reservations</a></li>
-                  <li><a href="#"><font-awesome-icon icon="shopping-cart" /></a></li>
+                <li v-for="(item, index) in menuItems" 
+                :key="index">
+                    <a :href="item.url">
+                        {{item.name}}
+                        <font-awesome-icon v-if="item.icon" :icon="item.icon" />
+                        <span v-if="item.tag" class="menu-tag">{{ item.tag }}</span>
+                    </a>
+                </li>
               </ul>
           </nav>
       </div>
@@ -47,6 +47,60 @@ export default {
     name: 'Header',
     components: {
         InfoBox
+    },
+    data() {
+        return {
+           menuItems: [
+               {
+                   name: 'Home',
+                   url: '#',
+                   tag: '',
+                   icon: ''
+               },
+               {
+                   name: 'Culinary History',
+                   url: '#',
+                   tag: '',
+                   icon: ''
+               },
+               {
+                   name: 'Our Team',
+                   url: '#',
+                   tag: '',
+                   icon: ''
+               },
+               {
+                   name: 'Our Menu',
+                   url: '#',
+                   tag: '',
+                   icon: ''
+               },
+               {
+                   name: 'Takeout',
+                   url: '#',
+                   tag: 'New',
+                   icon: ''
+               },
+               {
+                   name: 'Bulletin',
+                   url: '#',
+                   tag: '',
+                   icon: ''
+               },
+               {
+                   name: 'Reservation',
+                   url: '#',
+                   tag: '',
+                   icon: ''
+               },
+               {
+                   name: '',
+                   url: '#',
+                   tag: '',
+                   icon: 'shopping-cart'
+               },
+           ], 
+        }
     }
 }
 </script>
