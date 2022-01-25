@@ -31,7 +31,7 @@ export default {
           description: 'Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas.',
           button: 'Explore the menu',
           poster: 'slider52x.jpg',
-          icon: 'car'
+          icon: ''
         },
         {
           title: 'The best table in town',
@@ -39,7 +39,7 @@ export default {
           description: 'Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas.',
           button: 'Explore the menu',
           poster: 'slider32x.jpg',
-          icon: 'car'
+          icon: ''
         },
         {
           title: 'Takeout now available',

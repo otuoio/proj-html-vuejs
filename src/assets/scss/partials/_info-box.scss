@@ -27,12 +27,16 @@
             margin-bottom: 5rem;
         }
         .card-btn {
-                transition: all 1s;
+            .icon {
+                font-size: 1.1em;
+                margin-right: .2em;
             }
-            .card-btn:hover {
-                background-color: $white-color;
-                color: $black-color;
-                cursor: pointer;
-            }
+            transition: all 1s;
+        }
+        .card-btn:hover {
+            background-color: $white-color;
+            color: $black-color;
+            cursor: pointer;
+        }
     }
 }
