@@ -21,36 +21,33 @@
       <!-- /header bar logo menu -->
       <!-- banner-box -->
       <div class="banner-box">
-          <div class="info-box col-40">
-              <div class="col-20">
-                  <hr>
-              </div>
-              <div class="col-80 card">
-                  <h5 class="card-subtitle">The best table in town</h5>
-                  <h1 class="card-title">Fine dining experience</h1>
-                  <p class="card-description">Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas.</p>
-                  <button class="btn card-btn">Explore the menu</button>
-              </div>
-          </div>
+          <InfoBox class="col-40" />   
           <div class="img-box col-60">
             <img src="../assets/img/slider52x.jpg" alt="slider52x">
-            <div class="tag demos"><font-awesome-icon icon="share-alt" class="demos-icon"/><span>Demos</span></div>
-            <div class="tag sales">
-                <span class="price">
-                    <span class="currency">&#36;</span>
-                    <span class="number">39</span>
-                </span>
-                <span class="onsale">On Sale</span>
-            </div>
           </div>
       </div>
       <!-- /banner-box -->
+      <!-- tags -->
+    <div class="tag demos"><font-awesome-icon icon="share-alt" class="demos-icon"/><span>Demos</span></div>
+        <div class="tag sales">
+            <span class="price">
+                <span class="currency">&#36;</span>
+                <span class="number">39</span>
+            </span>
+            <span class="onsale">On Sale</span>
+    </div>
+      <!-- /tags -->
   </header>
 </template>
 
 <script>
+import InfoBox from './InfoBox.vue';
+
 export default {
-    name: 'Header'
+    name: 'Header',
+    components: {
+        InfoBox
+    }
 }
 </script>
 
@@ -64,7 +61,7 @@ header {
         @include absolute_l(0, 0);
         z-index: 99;
         width: 100%;
-        height: 15vh;
+        height: 100px;
         background-color: transparent;
         @include flex(flex-start, start, wrap);
         padding: 0 5em;
@@ -89,60 +86,48 @@ header {
             }
         }
     }
+    .tag {
+        width: 85px;
+        height: 85px;
+        background-color: $white-color;
+        @include flex(space-around, center, wrap);
+        flex-direction: column;
+        padding: 1em;
+        border-radius: .5em;
+        }
+    .demos {
+        @include absolute_r(20vh, 1em);
+        .demos-icon {
+            display: block;
+            @include font(1em, 300, unset, $tundora-color);
+            margin-bottom: .2em;
+        }
+        span {
+            @include font(.7em, 300, unset, $tundora-color);
+        }
+    }
+    .sales {
+        @include absolute_r(32vh, 1em);
+        .price .currency {
+            @include font(.7em, 600, unset, $christi-color);
+            position: relative;
+            right: .1em;
+            bottom: .6em;
+        }
+        .price .number {
+            @include font(1em, 600, unset, $christi-color);
+        }
+        .onsale {
+            @include font(.7em, 300, unset, $tundora-color);
+        }
+    }
     .banner-box {
         @include flex(flex-start, flex-start, wrap);
         overflow: hidden;
-        height: 100vh;
-        @import '../assets/scss/partials/_info-box.scss';
-        .info-box {
-            .card-btn {
-                transition: all 1s;
-            }
-            .card-btn:hover {
-                background-color: $white-color;
-                color: $black-color;
-                cursor: pointer;
-            }
-        }
+        height: 1000px;
         @import '../assets/scss/partials/_img-box.scss';
         .img-box {
             filter: brightness(0.7);
-            position: relative;
-            .tag {
-                width: 85px;
-                height: 85px;
-                background-color: $white-color;
-                @include flex(space-around, center, wrap);
-                flex-direction: column;
-                padding: 1em;
-                border-radius: .5em;
-            }
-            .demos {
-                @include absolute_r(20vh, 1em);
-                .demos-icon {
-                    display: block;
-                    @include font(1em, 300, unset, $tundora-color);
-                    margin-bottom: .2em;
-                }
-                span {
-                    @include font(.7em, 300, unset, $tundora-color);
-                }
-            }
-            .sales {
-                @include absolute_r(32vh, 1em);
-                .price .currency {
-                    @include font(.7em, 600, unset, $christi-color);
-                    position: relative;
-                    right: .1em;
-                    bottom: .6em;
-                }
-                .price .number {
-                    @include font(1em, 600, unset, $christi-color);
-                }
-                .onsale {
-                    @include font(.7em, 300, unset, $tundora-color);
-                }
-            }
         }
     }
 }

@@ -17,6 +17,10 @@ html {
     width: 40%;
     margin: 0 auto;
 }
+.container-70 {
+    width: 70%;
+    margin: 0 auto;
+}
 .container-80 {
     width: 80%;
     margin: 0 auto;
@@ -62,6 +66,9 @@ li {
 .col-40 {
     width: 40%;
 }
+.col-50 {
+    width: 50%;
+}
 .col-60 {
     width: 60%;
 }
@@ -73,6 +80,11 @@ li {
 }
 .col-90 {
     width: 90%;
+}
+
+// HEIGHTS
+.h-1000 {
+    height: 1000px;
 }
 
 // BUTTONS
