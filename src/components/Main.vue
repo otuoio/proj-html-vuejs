@@ -126,9 +126,7 @@
       <!-- /critics -->
 
     <!-- full screen banner -->
-        <div class="fs-banner">
-            <div class="picture"></div>
-        </div>
+        <BannerFs />
     <!-- /full screen banner -->
 
       <!-- news & promotions -->
@@ -172,11 +170,13 @@
 
 <script>
 import InfoBox from './InfoBox.vue';
+import BannerFs from './BannerFs.vue';
 
 export default {
     name: 'Main',
     components: {
-        InfoBox
+        InfoBox,
+        BannerFs
     }
 }
 </script>
@@ -247,6 +247,4 @@ export default {
         
     }
 }
-
-
 </style>
