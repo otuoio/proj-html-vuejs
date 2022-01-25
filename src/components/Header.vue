@@ -126,7 +126,7 @@ header {
         overflow: hidden;
         height: 1000px;
         @import '../assets/scss/partials/_img-box.scss';
-        .img-box {
+        img {
             filter: brightness(0.7);
         }
     }

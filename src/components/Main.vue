@@ -48,11 +48,13 @@
         </div>
     <!-- /call to action box -->
 
-      <!-- banner-box -->
-      <section class="banner-box">
-          <div class="img-box"></div>
-          <div class="info-box"></div>
-      </section>
+      <!-- banner-box da modificare con vuejs-->
+      <div class="banner-box">
+          <div class="img-box col-60">
+            <img src="../assets/img/slider32x.jpg" alt="slider52x">
+          </div>
+          <InfoBox class="col-40" />   
+      </div>
       <!-- /banner-box -->
 
       <!-- critics -->
@@ -121,8 +123,13 @@
 </template>
 
 <script>
+import InfoBox from './InfoBox.vue';
+
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        InfoBox
+    }
 }
 </script>
 
@@ -132,6 +139,15 @@ export default {
 
 @import '../assets/scss/partials/_jumbo.scss';
 @import '../assets/scss/partials/_cta-box.scss';
+.banner-box {
+        @include flex(flex-start, flex-start, wrap);
+        overflow: hidden;
+        height: 1000px;
+        @import '../assets/scss/partials/_img-box.scss';
+        img {
+            filter: brightness(0.7);
+        }
+    }
 
 
 </style>
