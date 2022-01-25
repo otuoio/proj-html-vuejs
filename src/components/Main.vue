@@ -216,6 +216,10 @@ export default {
         }
         .critics-card {
             background-color: $black-color;
+            transition: all 1s;
+        }
+        .critics-card:hover {
+            transform: scale(1.03);
         }
         @import '../assets/scss/partials/_criticsCard.scss';
         
