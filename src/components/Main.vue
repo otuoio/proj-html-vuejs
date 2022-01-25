@@ -48,7 +48,7 @@
         </div>
     <!-- /call to action box -->
 
-      <!-- banner-box da modificare con vuejs-->
+      <!-- banner-box DA MODIFICARE AGGIUNGENDO ARRAY CON DATI -->
       <div class="banner-box">
           <div class="img-box col-60">
             <img src="../assets/img/slider32x.jpg" alt="slider52x">
@@ -59,7 +59,31 @@
 
       <!-- critics -->
       <section class="critics">
-          <h2 class="sec-title"></h2>
+          <h3 class="critics-title" style="font-style: italic;">What critics are saying about us</h3>
+
+          <!-- critics-full-card -->
+          <div class="critics-full-card container-70">
+              <div class="col-left col-50">
+                <img src="../assets/img/blog72x-800x916.jpg" alt="blog72x-800x916">
+              </div>
+              <div class="col-rigth col-50">
+                <h4 class="critics-name">Meggy Stewart</h4>
+                <h2 class="critics-title">New York Times</h2>
+                <div class="vote">
+                    <font-awesome-icon icon="star" class="star"/>
+                    <font-awesome-icon icon="star" class="star"/>
+                    <font-awesome-icon icon="star" class="star"/>
+                    <font-awesome-icon icon="star" class="star"/>
+                    <font-awesome-icon icon="star" class="star"/>
+                </div>
+                <hr>
+                <p class="critics-description">Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas. <br>
+                <br> 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore eius officia possimus ratione sunt nihil deleniti.</p>
+                <button class="btn critics-btn">Read full article</button>
+              </div>
+          </div>
+          <!-- /critics-full-card -->
 
           <!-- centered-banner-box -->
           <div class="centered-banner-box">
@@ -68,20 +92,14 @@
           </div>
           <!-- /centered-banner-box -->
 
-          <!-- centered-banner-box -->
-          <div class="centered-banner-box">
-              <div class="col-left"></div>
-              <div class="col-right"></div>
-          </div>
-          <!-- /centered-banner-box -->
-
-          <!-- full screen banner -->
-          <div class="fs-banner">
-              <div class="picture"></div>
-          </div>
-          <!-- /full screen banner -->
       </section>
       <!-- /critics -->
+
+    <!-- full screen banner -->
+        <div class="fs-banner">
+            <div class="picture"></div>
+        </div>
+    <!-- /full screen banner -->
 
       <!-- news & promotions -->
       <section class="promo">
@@ -148,6 +166,68 @@ export default {
             filter: brightness(0.7);
         }
     }
+.critics {
+    background-color: $white-color;
+    text-align: center;
+    .critics-title {
+        @include font(2em, 400, unset, $tundora-color);
+        margin: 3em 0;
+    }
+    .critics-full-card {
+        height: 800px;
+        @include flex(flex-start, center, wrap);
+        text-align: left;
+        .col-left {
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .col-rigth {
+            height: 100%;
+            background-color: $black-color;
+            padding: 6em;
+            .critics-name {
+                @include font(1em, 500, uppercase, $silver-color);
+            }
+            .critics-title {
+                @include font(2em, 600, uppercase, $white-color);
+            }
+            .star {
+                @include font(1em, 500, uppercase, $white-color);
+                margin-right: .5em;
+            }
+            hr {
+                color: $white-color;
+                width: 20%;
+            }
+            .critics-description {
+                @include font(1em, 400, unset, $white-color);
+                line-height: 1.5em;
+            }
+            .critics-btn {
+                @include font(.8em, 400, uppercase, $white-color);
+            }
+            .critics-name,
+            .critics-title,
+            .star,
+            hr,
+            .critics-description,
+            .critics-btn {
+                margin-bottom: 3rem;
+            }
+            .critics-btn {
+                    transition: all 1s;
+                }
+            .critics-btn:hover {
+                background-color: $white-color;
+                color: $black-color;
+                cursor: pointer;
+            }
+        }
+    }
+}
 
 
 </style>
