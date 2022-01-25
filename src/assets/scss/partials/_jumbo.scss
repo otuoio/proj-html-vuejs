@@ -1,0 +1,55 @@
+.jumbo {
+    background-color: $white-color;
+    width: 100%;
+    height: 1200px;
+    .centered-banner-box {
+        height: 80%;
+        overflow: hidden;
+        background-color: transparent;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        @include flex(flex-start, start, wrap);
+        .col-left {
+            height: 100%;
+            padding: 5em;
+            .jumbo-intro {
+                .jumbo-intro-head {
+                    @include font(1em, 600, uppercase, $black-color);
+                }
+                @include font(1em, 400, unset, $black-color);
+            }
+            .jumbo-title {
+                @include font(3em, 600, uppercase, $black-color);
+            }
+            .jumbo-description {
+                @include font(1em, 400, unset, $black-color);
+            }
+            img {
+                width: 30%;
+                margin: 3em 0;
+            }
+            .jumbo-intro,
+            .jumbo-title {
+                margin-bottom: 5rem;
+            }
+        }
+        .col-right {
+            padding: 3em;
+            height: 100%;
+            .jumbo-img {
+                height: 100%;
+                position: relative;
+                img {
+                    filter: brightness(0.6);
+                    width: 100%;
+                    height: 100%;
+                }
+                .img-text {
+                    @include font(1em, 500, uppercase, $white-color);
+                    @include absolute_l(95%, 50%);
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
