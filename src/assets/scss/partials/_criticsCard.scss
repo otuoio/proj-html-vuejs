@@ -1,0 +1,42 @@
+.critics-card {
+    height: 100%;
+    
+    padding: 6em;
+    .critics-name {
+        @include font(1em, 500, uppercase, $silver-color);
+    }
+    .critics-cardtitle {
+        @include font(2em, 600, uppercase, $white-color);
+    }
+    .star {
+        @include font(1em, 500, uppercase, $white-color);
+        margin-right: .5em;
+                }
+    hr {
+        color: $white-color;
+        width: 20%;
+    }
+    .critics-description {
+        @include font(1em, 400, unset, $white-color);
+        line-height: 1.5em;
+    }
+    .critics-btn {
+        @include font(.8em, 400, uppercase, $white-color);
+    }
+    .critics-name,
+    .critics-cardtitle,
+    .star,
+    hr,
+    .critics-description,
+    .critics-btn {
+        margin-bottom: 3rem;
+    }
+    .critics-btn {
+        transition: all 1s;
+    }
+    .critics-btn:hover {
+        background-color: $white-color;
+        color: $black-color;
+        cursor: pointer;
+    }
+}

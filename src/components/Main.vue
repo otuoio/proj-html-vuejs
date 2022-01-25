@@ -66,9 +66,9 @@
               <div class="col-left col-50">
                 <img src="../assets/img/blog72x-800x916.jpg" alt="blog72x-800x916">
               </div>
-              <div class="col-rigth col-50">
+              <div class="col-rigth col-50 critics-card">
                 <h4 class="critics-name">Meggy Stewart</h4>
-                <h2 class="critics-title">New York Times</h2>
+                <h2 class="critics-cardtitle">New York Times</h2>
                 <div class="vote">
                     <font-awesome-icon icon="star" class="star"/>
                     <font-awesome-icon icon="star" class="star"/>
@@ -85,12 +85,42 @@
           </div>
           <!-- /critics-full-card -->
 
-          <!-- centered-banner-box -->
-          <div class="centered-banner-box">
-              <div class="col-left"></div>
-              <div class="col-right"></div>
+          <!-- critics-overlay-card -->
+          <div class="critics-overlay-card container-70">
+              <div class="col-left">
+                  <div class="critics-card">
+                    <h4 class="critics-name">Mary Maxey</h4>
+                    <h2 class="critics-cardtitle">The Guardian</h2>
+                    <div class="vote">
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                    </div>
+                    <hr>
+                    <p class="critics-description">Temporibus doloribus iure culpa iste illo dolorum mollitia atque deleniti pariatur soluta. Praesentium doloremque nostrum, dicta libero nobis assumenda voluptas.</p>
+                    <button class="btn critics-btn">Read full article</button>
+                  </div>
+              </div>
+              <div class="col-right">
+                  <div class="critics-card">
+                    <h4 class="critics-name">Patrick Monroe</h4>
+                    <h2 class="critics-cardtitle">Globe and Mail</h2>
+                    <div class="vote">
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                        <font-awesome-icon icon="star" class="star"/>
+                    </div>
+                    <hr>
+                    <p class="critics-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod pariatur ad soluta possimus dicta optio nam ipsa nesciunt asperiores praesentium, distinctio a.</p>
+                    <button class="btn critics-btn">Read full article</button>
+                  </div>
+              </div>
           </div>
-          <!-- /centered-banner-box -->
+          <!-- /critics-overlay-card -->
 
       </section>
       <!-- /critics -->
@@ -184,48 +214,37 @@ export default {
                 height: 100%;
             }
         }
-        .col-rigth {
-            height: 100%;
+        .critics-card {
             background-color: $black-color;
-            padding: 6em;
-            .critics-name {
-                @include font(1em, 500, uppercase, $silver-color);
-            }
-            .critics-title {
-                @include font(2em, 600, uppercase, $white-color);
-            }
-            .star {
-                @include font(1em, 500, uppercase, $white-color);
-                margin-right: .5em;
-            }
-            hr {
-                color: $white-color;
-                width: 20%;
-            }
-            .critics-description {
-                @include font(1em, 400, unset, $white-color);
-                line-height: 1.5em;
-            }
-            .critics-btn {
-                @include font(.8em, 400, uppercase, $white-color);
-            }
-            .critics-name,
-            .critics-title,
-            .star,
-            hr,
-            .critics-description,
-            .critics-btn {
-                margin-bottom: 3rem;
-            }
-            .critics-btn {
-                    transition: all 1s;
-                }
-            .critics-btn:hover {
-                background-color: $white-color;
-                color: $black-color;
-                cursor: pointer;
+        }
+        @import '../assets/scss/partials/_criticsCard.scss';
+        
+    }
+    .critics-overlay-card {
+        height: 800px;
+        @include flex(flex-start, center, wrap);
+        text-align: left;
+        margin-top: 2em;
+        .col-left,
+        .col-right {
+            width: calc(50% - 1em);
+            height: 100%;
+            margin-right: 1em;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            @import '../assets/scss/partials/_criticsCard.scss';
+            .critics-card {
+                background-color: rgba($color: #000000, $alpha: 0.7);
             }
         }
+        .col-left {
+            background-image: url('../assets/img/info52x.jpg');
+        }
+        .col-right {
+            background-image: url('../assets/img/info12x.jpg');
+        }
+        
     }
 }
 
