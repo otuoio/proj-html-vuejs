@@ -8,11 +8,9 @@
             <p class="disclaim">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, consequatur aperiam. Mollitia, nostrum? Accusamus, voluptatem alias..</p>
             <div class="social">
                 <ul class="menu-inline">
-                    <li><a href="#"><span class="social-tag">f</span></a></li>
-                    <li><a href="#"><span class="social-tag">T</span></a></li>
-                    <li><a href="#"><span class="social-tag">YT</span></a></li>
-                    <li><a href="#"><span class="social-tag">I</span></a></li>
-                    <li><a href="#"><span class="social-tag">in</span></a></li>
+                    <li v-for="i in social"
+                    :key="i"
+                    ><a href="#"><span class="social-tag">{{ i.icon }}</span></a></li>
                 </ul>
             </div>
         </div>
@@ -26,7 +24,33 @@
 
 <script>
 export default {
-    name: 'Footer'
+    name: 'Footer',
+    data() {
+        return {
+            social: [
+                {
+                    name: 'Facebook',
+                    icon: 'f'
+                },
+                {
+                    name: 'twitter',
+                    icon: 'T'
+                },
+                {
+                    name: 'YouTube',
+                    icon: 'YT'
+                },
+                {
+                    name: 'Instagram',
+                    icon: 'I'
+                },
+                {
+                    name: 'Linkedin',
+                    icon: 'in'
+                },
+            ]
+        }
+    }
 }
 </script>
 
