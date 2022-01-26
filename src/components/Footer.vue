@@ -86,6 +86,11 @@ export default {
             border-radius: 50%;
             color: $black-color;
             margin: 0 .5em;
+            transition: all .5s;
+            &:hover {
+                background-color: $mantle-color;
+                color: $white-color;
+            }
         }
     }
 }
