@@ -242,7 +242,7 @@
       <!-- /menus -->
 
       <!-- full screen banner -->
-    <div class="fs-banner">
+    <div class="fs-banner-bottom">
         <img src="../assets/img/hero42x.jpg" alt="hero42x">
         <div class="fs-banner-info">
             <div class="item">
@@ -398,59 +398,6 @@ export default {
         
     }
 }
-.fs-banner {
-    height: 600px;
-    position: relative;
-    margin: 4em 0;
-    img {
-        filter: brightness(0.8);
-        width: 100%;
-        object-fit: cover;
-        // height: 100%;
-    }
-    .fs-banner-info {
-        @include absolute_l(50%, 15%);
-        width: 25%;
-        transform: translate(0, -50%);
-        background-color: $black-color;
-        padding: 4em;
-        .item {
-            @include flex(space-between, start, wrap);
-            .info-title {
-                width: 50%;
-                @include font(2em, 600, uppercase, $white-color);
-            }
-            .info-price {
-                display: block;
-                width: 10%;
-                @include font(1em, 400, unset, $silver-color);
-            }
-        }
-        hr {
-            width: 20%;
-            color: $silver-color;
-        }
-        .info-description {
-            @include font(1em, 400, unset, $silver-color);
-        }
-        .info-btn {
-            @include font(.8em, 500, uppercase, $silver-color);
-            transition: all 1s;
-            &:hover {
-                background-color: $silver-color;
-                color: $black-color;
-                cursor: pointer;
-            }
-        }
-        .info-title,
-        .info-price,
-        hr,
-        .info-description,
-        .info-btn {
-            margin-bottom: 2em;
-        }
-    }
-}
 .promo {
     background-color: $white-color;
     text-align: center;
@@ -470,72 +417,8 @@ export default {
     margin-bottom: 8em;
     .menu-cards {
         @include flex(center, center, wrap);
-        .menu-card.menu-card-silver {
-            width: calc(100% / 3);
-            background-color: $silver-color;
-            .menu-card-container {
-                padding: 6em;
-                .menu-card-title {
-                    @include font(1.5em, 600, uppercase, $black-color);
-                    margin-bottom: 2em;
-                }
-                .menu-card-dish {
-                    .menu-card-dish-title {
-                        @include flex(space-between, center, wrap);
-                        margin-bottom: 1em;
-                        .menu-card-dish-name {
-                            width: 50%;
-                            @include font(1.3em, 600, uppercase, $black-color);
-                        }
-                        .menu-card-dish-price {
-                            display: block;
-                            width: 10%;
-                            @include font(.8em, 400, unset, $tundora-color);
-                        }
-                    }
-                    .menu-card-dish-description {
-                        @include font(1em, 400, unset, $tundora-color);
-                        margin-bottom: 2em;
-                    }
-                }
-            }
-        }
-        .menu-card.menu-card-black {
-            width: calc(100% / 3);
-            background-image: url(../assets/img/misc22x.jpg);
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            bottom: 4em;
-            left: 0;
-            .menu-card-container {
-                padding: 6em;
-                background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(28,28,28,0.3) 100%);
-                .menu-card-title {
-                    @include font(1.5em, 600, uppercase, $white-color);
-                    margin-bottom: 2em;
-                }
-                .menu-card-dish {
-                    .menu-card-dish-title {
-                        @include flex(space-between, center, wrap);
-                        margin-bottom: 1em;
-                        .menu-card-dish-name {
-                            width: 50%;
-                            @include font(1.3em, 600, uppercase, $white-color);
-                        }
-                        .menu-card-dish-price {
-                            display: block;
-                            width: 10%;
-                            @include font(.8em, 400, unset, $silver-color);
-                        }
-                    }
-                    .menu-card-dish-description {
-                        @include font(1em, 400, unset, $silver-color);
-                        margin-bottom: 2em;
-                    }
-                }
-            }
-        }
+        @import '../assets/scss/partials/_menuCard.scss';
     }
 }
+@import '../assets/scss/partials/_fsBannerBottom.scss';
 </style>
