@@ -86,54 +86,11 @@
 
           <!-- promo cards -->
           <div class="promo-cards container-70">
-              <div class="promo-card col-30">
-                <div class="promo-picture">
-                    <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
-                    <div class="promo-hover-credits">
-                        <font-awesome-icon icon="link" class="promo-hover-icon"/>
-                        <h4 class="promo-hover-title">The best Coffee in town</h4>
-                        <p class="promo-hover-categories">News</p>
-                    </div>
-                </div>
-                <h4 class="promo-card-title">The best Coffee in town</h4>
-                <div class="promo-credits">
-                    <p class="promo-card-author">By admin</p>
-                    <p class="promo-card-date">January 7th, 2020</p>
-                    <p class="promo-card-categories">Categories: News</p>
-                </div>
-              </div>
-              <div class="promo-card col-30">
-                    <div class="promo-picture">
-                        <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
-                        <div class="promo-hover-credits">
-                        <font-awesome-icon icon="link" class="promo-hover-icon"/>
-                        <h4 class="promo-hover-title">The best Coffee in town</h4>
-                        <p class="promo-hover-categories">News</p>
-                    </div>
-                    </div>
-                    <h4 class="promo-card-title">The best Coffee in town</h4>
-                    <div class="promo-credits">
-                        <p class="promo-card-author">By admin</p>
-                        <p class="promo-card-date">January 7th, 2020</p>
-                        <p class="promo-card-categories">Categories: News</p>
-                    </div>
-              </div>
-              <div class="promo-card col-30">
-                    <div class="promo-picture">
-                        <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
-                        <div class="promo-hover-credits">
-                        <font-awesome-icon icon="link" class="promo-hover-icon"/>
-                        <h4 class="promo-hover-title">The best Coffee in town</h4>
-                        <p class="promo-hover-categories">News</p>
-                    </div>
-                    </div>
-                    <h4 class="promo-card-title">The best Coffee in town</h4>
-                    <div class="promo-credits">
-                        <p class="promo-card-author">By admin</p>
-                        <p class="promo-card-date">January 7th, 2020</p>
-                        <p class="promo-card-categories">Categories: News</p>
-                    </div>
-              </div>
+              <PromoCard 
+              v-for="(card, index) in promoCards"
+              :key="index"
+              :card="card"
+              />
           </div>
           <!-- /promo cards -->
       </section>
@@ -286,6 +243,7 @@ import ImageBox from './ImageBox.vue';
 import CallToActionCard from './CallToActionCard.vue';
 import CriticsCard from './CriticsCard.vue';
 import BannerFs from './BannerFs.vue';
+import PromoCard from './PromoCard.vue';
 
 export default {
     name: 'Main',
@@ -294,7 +252,8 @@ export default {
         ImageBox,
         CallToActionCard,
         CriticsCard,
-        BannerFs
+        BannerFs,
+        PromoCard
     },
     props: {
         banner: {
@@ -348,6 +307,32 @@ export default {
                     button: 'Read full article'
                 },
             ],
+            promoCards: [
+                {
+                    picture: 'blog92x-1200x1375.jpg',
+                    title: 'The best Coffee in town',
+                    categories: 'News',
+                    author: 'admin',
+                    date: 'January 7th, 2020',
+                    icon: 'link'
+                },
+                {
+                    picture: 'blog72x-1200x1375.jpg',
+                    title: 'Discover our new menu',
+                    categories: 'News',
+                    author: 'admin',
+                    date: 'January 7th, 2020',
+                    icon: 'link'
+                },
+                {
+                    picture: 'blog82x-1200x1375.jpg',
+                    title: 'We now accept square!',
+                    categories: 'News',
+                    author: 'admin',
+                    date: 'January 7th, 2020',
+                    icon: 'link'
+                },
+            ]
         }
     }
 }
@@ -429,7 +414,6 @@ export default {
     }
     .promo-cards {
         @include flex(space-around, start, wrap);
-        @import '../assets/scss/partials/_promoCard.scss';
     }
 }
 .menus {
