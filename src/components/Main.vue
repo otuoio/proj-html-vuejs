@@ -130,107 +130,115 @@
       <!-- /banner-box -->
 
       <!-- menus -->
-        <div class="menus">
-            <div class="menu-card col-30">
-                <h2 class="menu-card-title">Hors d'oeuvres</h2>
-                <div class="menu-card-dishes">
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
+        <section class="menus">
+            <div class="menu-cards container-90">
+                <div class="menu-card menu-card-silver">
+                    <div class="menu-card-container">
+                        <h2 class="menu-card-title">Hors d'oeuvres</h2>
+                        <div class="menu-card-dishes">
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
                         </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
                     </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
+                </div>
+                <div class="menu-card menu-card-black">
+                    <div class="menu-card-container">
+                        <h2 class="menu-card-title">Hors d'oeuvres</h2>
+                        <div class="menu-card-dishes">
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
                         </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
                     </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
+                </div>
+                <div class="menu-card menu-card-silver">
+                    <div class="menu-card-container">
+                        <h2 class="menu-card-title">Hors d'oeuvres</h2>
+                        <div class="menu-card-dishes">
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
+                            <div class="menu-card-dish">
+                                <div class="menu-card-dish-title">
+                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
+                                    <span class="menu-card-dish-price">&dollar;48</span>
+                                </div>
+                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
+                            </div>
                         </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
                     </div>
                 </div>
             </div>
-            <div class="menu-card col-30">
-                <h2 class="menu-card-title">Hors d'oeuvres</h2>
-                <div class="menu-card-dishes">
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-card col-30">
-                <h2 class="menu-card-title">Hors d'oeuvres</h2>
-                <div class="menu-card-dishes">
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                    <div class="menu-card-dish">
-                        <div class="menu-card-dish-title">
-                            <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                            <span class="menu-card-dish-price">&dollar;48</span>
-                        </div>
-                        <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
       <!-- /menus -->
 
       <!-- full screen banner -->
@@ -454,6 +462,80 @@ export default {
     .promo-cards {
         @include flex(space-around, center, wrap);
         @import '../assets/scss/partials/_promoCard.scss';
+    }
+}
+.menus {
+    background-color: $white-color;
+    margin-top: 8em;
+    margin-bottom: 8em;
+    .menu-cards {
+        @include flex(center, center, wrap);
+        .menu-card.menu-card-silver {
+            width: calc(100% / 3);
+            background-color: $silver-color;
+            .menu-card-container {
+                padding: 6em;
+                .menu-card-title {
+                    @include font(1.5em, 600, uppercase, $black-color);
+                    margin-bottom: 2em;
+                }
+                .menu-card-dish {
+                    .menu-card-dish-title {
+                        @include flex(space-between, center, wrap);
+                        margin-bottom: 1em;
+                        .menu-card-dish-name {
+                            width: 50%;
+                            @include font(1.3em, 600, uppercase, $black-color);
+                        }
+                        .menu-card-dish-price {
+                            display: block;
+                            width: 10%;
+                            @include font(.8em, 400, unset, $tundora-color);
+                        }
+                    }
+                    .menu-card-dish-description {
+                        @include font(1em, 400, unset, $tundora-color);
+                        margin-bottom: 2em;
+                    }
+                }
+            }
+        }
+        .menu-card.menu-card-black {
+            width: calc(100% / 3);
+            background-image: url(../assets/img/misc22x.jpg);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            bottom: 4em;
+            left: 0;
+            .menu-card-container {
+                padding: 6em;
+                background: linear-gradient(180deg, rgba(0,0,0,1) 30%, rgba(28,28,28,0.3) 100%);
+                .menu-card-title {
+                    @include font(1.5em, 600, uppercase, $white-color);
+                    margin-bottom: 2em;
+                }
+                .menu-card-dish {
+                    .menu-card-dish-title {
+                        @include flex(space-between, center, wrap);
+                        margin-bottom: 1em;
+                        .menu-card-dish-name {
+                            width: 50%;
+                            @include font(1.3em, 600, uppercase, $white-color);
+                        }
+                        .menu-card-dish-price {
+                            display: block;
+                            width: 10%;
+                            @include font(.8em, 400, unset, $silver-color);
+                        }
+                    }
+                    .menu-card-dish-description {
+                        @include font(1em, 400, unset, $silver-color);
+                        margin-bottom: 2em;
+                    }
+                }
+            }
+        }
     }
 }
 </style>
