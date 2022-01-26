@@ -110,111 +110,12 @@
       <!-- menus -->
         <section class="menus">
             <div class="menu-cards container-90">
-                <div class="menu-card menu-card-silver">
-                    <div class="menu-card-container">
-                        <h2 class="menu-card-title">Hors d'oeuvres</h2>
-                        <div class="menu-card-dishes">
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-card menu-card-black">
-                    <div class="menu-card-container">
-                        <h2 class="menu-card-title">Hors d'oeuvres</h2>
-                        <div class="menu-card-dishes">
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-card menu-card-silver">
-                    <div class="menu-card-container">
-                        <h2 class="menu-card-title">Hors d'oeuvres</h2>
-                        <div class="menu-card-dishes">
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                            <div class="menu-card-dish">
-                                <div class="menu-card-dish-title">
-                                    <h4 class="menu-card-dish-name">Ahi salmon nigiri</h4>
-                                    <span class="menu-card-dish-price">&dollar;48</span>
-                                </div>
-                                <p class="menu-card-dish-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <MenuCard 
+                v-for="(card, index) in menuCards"
+                v-bind:key="index"
+                :class="(index % 2 == 0) ? 'menu-card-silver' : 'menu-card-black'"
+                :card="card"
+                />
             </div>
         </section>
       <!-- /menus -->
@@ -244,6 +145,7 @@ import CallToActionCard from './CallToActionCard.vue';
 import CriticsCard from './CriticsCard.vue';
 import BannerFs from './BannerFs.vue';
 import PromoCard from './PromoCard.vue';
+import MenuCard from './MenuCard.vue';
 
 export default {
     name: 'Main',
@@ -253,7 +155,8 @@ export default {
         CallToActionCard,
         CriticsCard,
         BannerFs,
-        PromoCard
+        PromoCard,
+        MenuCard
     },
     props: {
         banner: {
@@ -331,6 +234,85 @@ export default {
                     author: 'admin',
                     date: 'January 7th, 2020',
                     icon: 'link'
+                },
+            ],
+            menuCards: [
+                {
+                    title: 'Hors d\'oeuvres',
+                    dishes: [
+                        {
+                            'name': 'Ahi salmon nigiri',
+                            'price': 48,
+                            'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!'
+                        },
+                        {
+                            'name': 'Umi masu salad',
+                            'price': 21,
+                            'description': 'Recusandae porro iure molestiae totam maiores, reprehenderit mollitia unde eaque facere maxime.'
+                        },
+                        {
+                            'name': 'Temaki with crab',
+                            'price': 32,
+                            'description': 'Quos incidunt, praesentium facere dolores distinctio fuga, ipsum quis voluptatem.'
+                        },
+                        {
+                            'name': 'California rolls',
+                            'price': 22,
+                            'description': 'Sapiente provident dolor nesciunt nisi nemo illo. Maxime consequatur minus perspiciatis a.'
+                        },
+                    ],
+                },
+                {
+                    title: 'Main course',
+                    dishes: [
+                        {
+                            'name': 'Braised abalone',
+                            'price': 52,
+                            'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!'
+                        },
+                        {
+                            'name': 'Twice cooked pork',
+                            'price': 21,
+                            'description': 'Recusandae porro iure molestiae totam maiores, reprehenderit mollitia unde eaque facere maxime.'
+                        },
+                        {
+                            'name': 'Kung pao chicken',
+                            'price': 32,
+                            'description': 'Quos incidunt, praesentium facere dolores distinctio fuga, ipsum quis voluptatem.'
+                        },
+                        {
+                            'name': 'Char siu & sushis',
+                            'price': 48,
+                            'description': 'Sapiente provident dolor nesciunt nisi nemo illo. Maxime consequatur minus perspiciatis a.'
+                        },
+                    ],
+
+                },
+                {
+                    title: 'Desserts',
+                    dishes: [
+                        {
+                            'name': 'Chocolate ball cake',
+                            'price': 13,
+                            'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo inventore ex veniam!'
+                        },
+                        {
+                            'name': 'Lime pie with crust',
+                            'price': 21,
+                            'description': 'Recusandae porro iure molestiae totam maiores, reprehenderit mollitia unde eaque facere maxime.'
+                        },
+                        {
+                            'name': 'Rasberry pear cake',
+                            'price': 18,
+                            'description': 'Quos incidunt, praesentium facere dolores distinctio fuga, ipsum quis voluptatem.'
+                        },
+                        {
+                            'name': 'Café au lait',
+                            'price': 6,
+                            'description': 'Sapiente provident dolor nesciunt nisi nemo illo. Maxime consequatur minus perspiciatis a.'
+                        },
+                    ],
+
                 },
             ]
         }
@@ -422,7 +404,6 @@ export default {
     margin-bottom: 8em;
     .menu-cards {
         @include flex(center, center, wrap);
-        @import '../assets/scss/partials/_menuCard.scss';
     }
 }
 @import '../assets/scss/partials/_fsBannerBottom.scss';

@@ -8,9 +8,9 @@
             <p class="disclaim">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero, consequatur aperiam. Mollitia, nostrum? Accusamus, voluptatem alias..</p>
             <div class="social">
                 <ul class="menu-inline">
-                    <li v-for="i in social"
-                    :key="i"
-                    ><a href="#"><span class="social-tag">{{ i.icon }}</span></a></li>
+                    <li v-for="(item, index) in social"
+                    :key="index"
+                    ><a href="#"><span class="social-tag">{{ item.icon }}</span></a></li>
                 </ul>
             </div>
         </div>

@@ -3,7 +3,7 @@
         <div class="promo-picture">
             <img :src="require(`../assets/img/${card.picture}`)" :alt="card.title">
             <div class="promo-hover-credits">
-                <font-awesome-icon :icon="card.link" class="promo-hover-icon"/>
+                <font-awesome-icon :icon="card.icon" class="promo-hover-icon"/>
                 <h4 class="promo-hover-title">{{ card.title }}</h4>
                 <p class="promo-hover-categories">{{ card.categories }}</p>
             </div>
