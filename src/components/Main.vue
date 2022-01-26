@@ -82,15 +82,39 @@
 
       <!-- news & promotions -->
       <section class="promo">
-          <h2 class="sec-title"></h2>
+          <h3 class="promo-title">Latest news &amp; promotions</h3>
 
-          <!-- call to action box -->
-          <div class="cta-box">
-              <div class="col"></div>
-              <div class="col"></div>
-              <div class="col"></div>
+          <!-- promo cards -->
+          <div class="promo-cards container-70">
+              <div class="promo-card col-30">
+                <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                <h4 class="promo-card-title">The best Coffee in town</h4>
+                <div class="promo-credits">
+                    <p class="promo-card-author">By admin</p>
+                    <p class="promo-card-date">January 7th, 2020</p>
+                    <p class="promo-card-categories">Categories: News</p>
+                </div>
+              </div>
+              <div class="promo-card col-30">
+                  <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                    <h4 class="promo-card-title">The best Coffee in town</h4>
+                    <div class="promo-credits">
+                        <p class="promo-card-author">By admin</p>
+                        <p class="promo-card-date">January 7th, 2020</p>
+                        <p class="promo-card-categories">Categories: News</p>
+                    </div>
+              </div>
+              <div class="promo-card col-30">
+                  <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                    <h4 class="promo-card-title">The best Coffee in town</h4>
+                    <div class="promo-credits">
+                        <p class="promo-card-author">By admin</p>
+                        <p class="promo-card-date">January 7th, 2020</p>
+                        <p class="promo-card-categories">Categories: News</p>
+                    </div>
+              </div>
           </div>
-          <!-- /call to action box -->
+          <!-- /promo cards -->
       </section>
       <!-- /news & promotions -->
 
@@ -320,6 +344,56 @@ export default {
         .info-description,
         .info-btn {
             margin-bottom: 2em;
+        }
+    }
+}
+.promo {
+    background-color: $white-color;
+    text-align: center;
+    margin-bottom: 2em;
+    .promo-title {
+        @include font(2em, 400, unset, $tundora-color);
+        margin: 3em 0;
+    }
+    .promo-cards {
+        @include flex(space-around, center, wrap);
+        .promo-card {
+            img {
+                width: 100%;
+                height: 600px;
+                object-fit: cover;
+                object-position: center;
+            }
+            .promo-card-title {
+                @include font(1.2em, 600, uppercase, $black-color);
+            }
+            .promo-credits {
+                @include flex(center, center, wrap);
+                .promo-card-author,
+                .promo-card-date,
+                .promo-card-categories {
+                    display: inline-block;
+                    padding: 0 .5em;
+                }
+                .promo-card-author {
+                    @include font(.8em, 400, unset, $tundora-color);
+                }
+                .promo-card-date {
+                    @include font(.8em, 400, unset, $tundora-color);
+                    border-left: 1px solid $tundora-color;
+                    border-right: 1px solid $tundora-color;
+                    height: .8em;
+                    line-height: .8em;
+                }
+                .promo-card-categories {
+                    @include font(.8em, 400, unset, $tundora-color);
+                }
+            }
+            img,
+            .promo-card-title,
+            .promo-credits {
+                margin-bottom: 1em;
+            }
         }
     }
 }
