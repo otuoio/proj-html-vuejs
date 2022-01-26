@@ -87,7 +87,14 @@
           <!-- promo cards -->
           <div class="promo-cards container-70">
               <div class="promo-card col-30">
-                <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                <div class="promo-picture">
+                    <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                    <div class="promo-hover-credits">
+                        <font-awesome-icon icon="link" class="promo-hover-icon"/>
+                        <h4 class="promo-hover-title">The best Coffee in town</h4>
+                        <p class="promo-hover-categories">News</p>
+                    </div>
+                </div>
                 <h4 class="promo-card-title">The best Coffee in town</h4>
                 <div class="promo-credits">
                     <p class="promo-card-author">By admin</p>
@@ -96,7 +103,14 @@
                 </div>
               </div>
               <div class="promo-card col-30">
-                  <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                    <div class="promo-picture">
+                        <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                        <div class="promo-hover-credits">
+                        <font-awesome-icon icon="link" class="promo-hover-icon"/>
+                        <h4 class="promo-hover-title">The best Coffee in town</h4>
+                        <p class="promo-hover-categories">News</p>
+                    </div>
+                    </div>
                     <h4 class="promo-card-title">The best Coffee in town</h4>
                     <div class="promo-credits">
                         <p class="promo-card-author">By admin</p>
@@ -105,7 +119,14 @@
                     </div>
               </div>
               <div class="promo-card col-30">
-                  <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                    <div class="promo-picture">
+                        <img src="../assets/img/blog92x-1200x1375.jpg" alt="blog92x-1200x1375">
+                        <div class="promo-hover-credits">
+                        <font-awesome-icon icon="link" class="promo-hover-icon"/>
+                        <h4 class="promo-hover-title">The best Coffee in town</h4>
+                        <p class="promo-hover-categories">News</p>
+                    </div>
+                    </div>
                     <h4 class="promo-card-title">The best Coffee in town</h4>
                     <div class="promo-credits">
                         <p class="promo-card-author">By admin</p>
@@ -407,7 +428,7 @@ export default {
         margin: 3em 0;
     }
     .promo-cards {
-        @include flex(space-around, center, wrap);
+        @include flex(space-around, start, wrap);
         @import '../assets/scss/partials/_promoCard.scss';
     }
 }

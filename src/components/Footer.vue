@@ -69,8 +69,22 @@ export default {
     background-color: $black-color;
     @include flex(center, center, wrap);
     padding: 1em 0;
+    position: relative;
     p {
         @include font(.7em, 400, unset, $silver-color);
+    }
+    .arrow-up {
+        display: inline-block;
+            width: 30px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            background-color: $tundora-color;
+            border-bottom: 1px solid $silver-color;
+            color: $white-color;
+            font-size: .8em;
+            @include absolute_r(100%, 5%);
+            transform: translate(0, -100%);
     }
 }
 </style>
