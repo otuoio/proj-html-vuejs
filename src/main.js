@@ -11,11 +11,16 @@ import { faCar } from '@fortawesome/free-solid-svg-icons';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 
 library.add(fas, fab);
-library.add(faShoppingCart, faShareAlt, faStar, faCar, faAngleUp, faLink);
+library.add(faShoppingCart, faShareAlt, faStar, faCar, faAngleUp, faLink, faFacebookF, faTwitter, faYoutube, faInstagram, faLinkedinIn);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 

@@ -10,7 +10,7 @@
                 <ul class="menu-inline">
                     <li v-for="(item, index) in social"
                     :key="index"
-                    ><a href="#"><span class="social-tag">{{ item.icon }}</span></a></li>
+                    ><a href="#"><span class="social-tag"><img :src="item.icon" alt=""></span></a></li>
                 </ul>
             </div>
         </div>
@@ -30,23 +30,23 @@ export default {
             social: [
                 {
                     name: 'Facebook',
-                    icon: 'f'
+                    icon: 'https://freepngimg.com/thumb/social_media/63011-social-media-computer-icons-download-hq-png.png'
                 },
                 {
                     name: 'twitter',
-                    icon: 'T'
+                    icon: 'https://freepngimg.com/thumb/social_media/73991-media-icons-computer-twitter-social-download-hq-png.png'
                 },
                 {
                     name: 'YouTube',
-                    icon: 'YT'
+                    icon: 'https://freepngimg.com/thumb/youtube/77804-like-button-youtube-team-logo-dk.png'
                 },
                 {
                     name: 'Instagram',
-                    icon: 'I'
+                    icon: 'https://freepngimg.com/thumb/social_media/74488-instagram-icons-media-medtempnow-computer-social-logo.png'
                 },
                 {
                     name: 'Linkedin',
-                    icon: 'in'
+                    icon: 'https://freepngimg.com/thumb/social_media/74290-icons-media-wallpaper-linkedin-desktop-computer-social.png'
                 },
             ]
         }
@@ -84,7 +84,12 @@ export default {
             text-align: center;
             background-color: $white-color;
             border-radius: 50%;
-            color: $black-color;
+            @include flex(center, center, wrap);
+            img {
+                display: inline-block;
+                width: 50%;
+                filter: brightness(0);
+            }
             margin: 0 .5em;
             transition: all .5s;
             &:hover {
